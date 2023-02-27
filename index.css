@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Labrada:wght@700&family=Poppins:wght@200;300;400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #141414;
+    color: white;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+header{
+    z-index: 999;
+    width: 100%;
+    padding: 0.5rem;
+    position: fixed;
+    background: transparent;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+}
+.bg-dark{
+    background-color: rgb(20, 20, 20);
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    margin: auto;
+    color: white;
+    font-size: 1.4rem;
+    margin: 0.3rem auto;
+    cursor: pointer;
+}
+.leftContainer{
+    width: 60%;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.leftContainer .nav-items{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+.nav-item{
+    color: rgb(245, 240, 240);
+    opacity: 0.7;
+
+}
+li.nav-item:hover{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+.nav-item.active{
+    opacity: 1;
+    font-weight: 500;
+}
+.leftContainer img{
+    width: 15%;
+    object-fit: cover;
+    object-position: center;
+}
+.rightContainer{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.rightContainer i{
+    font-size: 2rem;
+}
+.rightContainer img{
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+}
+/* Movies Container  */
+.movies-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 1rem 0  ;
+}
+.movies-cont .movies-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    width: 97%;
+    color: white;
+    overflow-x: scroll;
+    margin: auto;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+.imagesRow{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+}
+.imagesRow .imgBox{
+    width: 300px;
+    height: 180px;
+    border-radius: 4px;
+}
+.movies-section .sectionHeading{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.exploreNudge{
+    opacity: 0;
+    font-size: 1.2rem;
+    color: rgb(5, 145, 145);
+    font-weight: bold;
+}
+.movies-section:hover .exploreNudge{
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+.movie-item{
+    width: 300px;
+    height: 180px;
+    border-radius: 4px;
+}
+.movie-item:hover{
+    transform: scale(1.1);
+    transition: all 0.7s ease;
+}
+.banner-section{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.banner-content{
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.banner_FadeBottom{
+    height: 150px;
+    background:linear-gradient(180deg,
+        transparent,
+        rgba(37,37,37,.61),
+        #141414
+    ); 
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+}
+.banner-content-text{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1.5%;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+}
+.banner-title{
+    font-size: 6rem;
+}
+.banner-info span{
+    color: red;
+}
+.banner-overview{
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+.action-buttons-cont{
+    display: flex;
+    gap: 10px;
+}
+.action-button{
+    padding: 0.7rem 1.5rem;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.action-button:last-child{
+    background-color: gray;
+    color: white;
+}
+.action-button:hover{
+    background-color: rgb(172, 172, 172);
+}
+@media (max-width : 768px) {
+    li.nav-item{
+        display: none;
+    }
+    .leftContainer img{
+        width: 50%;
+    }
+    .banner-content-text{
+        width: 80%;
+    }
+    .action-button{
+        font-size: 1.8rem;
+    }
+    .movies-section .sectionHeading{
+        font-size: 1.8rem;
+    }
+}

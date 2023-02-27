@@ -8,7 +8,7 @@ const apiPaths = {
     allCategories : `${apiEndpoint}/genre/movie/list?api_key=${apiKey}`,
     fetchMoviesList : (id)=> `${apiEndpoint}discover/movie?api_key=${apiKey}&with_genres=${id}`,
     fetchTrending:`${apiEndpoint}/trending/all/day?api_key=${apiKey}`,
-    searchOnYoutube: (query) => `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyC0oR7YZsCRBjHVQXAlFSZ0Jgy1TRSC8cQ`
+    searchOnYoutube: (query) =>  `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyC0oR7YZsCRBjHVQXAlFSZ0Jgy1TRSC8cQ`
 }
 
 function movieTrailer (movieName){
